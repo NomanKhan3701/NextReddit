@@ -48,6 +48,7 @@ const Images = ({ ImageUrls }) => {
 		<>
 			<div className={styles.imgContainer} ref={imgContainerRef}>
 				{ImageUrls.map((url, index) => {
+					const [loading, setLoading] = useState(true);
 					return (
 						<div
 							key={index}
@@ -57,7 +58,7 @@ const Images = ({ ImageUrls }) => {
 							onClick={showPopup}
 						>
 							<div className={styles.imageWrapper}>
-								<Image quality={100} alt={defaultImg} src={url} width={270} height={270} objectFit="cover" />
+								<Image quality={100} src={loading ? defaultImage : url} width={270} height={270} objectFit="cover" onLoadingComplete={() => setLoading(false)} />
 							</div>
 						</div>
 					);
