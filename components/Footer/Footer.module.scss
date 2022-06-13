@@ -1,0 +1,36 @@
+.footer {
+    background: black;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px 80px;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .developer {
+        font-size: 17px;
+        color: gray;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        margin-bottom: 20px;
+        margin-left: 20px;
+
+        svg {
+            cursor: pointer;
+            margin-right: 20px;
+            font-size: 30px;
+            transition: 0.2s all;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+        }
+    }
+}
