@@ -23,14 +23,12 @@ const Images = ({ ImageUrls }) => {
 		if (!e.target.matches("img") && !e.target.matches("i") && !e.target.matches("svg") && !e.target.matches("path")) {
 			popupRef.current.style.opacity = "0";
 			popupRef.current.style.pointerEvents = "none";
-			setCurrentImage(defaultImage);
 		}
 	};
 
 	const closeCrossPopup = (e) => {
 		popupRef.current.style.opacity = "0";
 		popupRef.current.style.pointerEvents = "none";
-		setCurrentImage(defaultImage);
 	}
 
 	const nextImage = () => {
@@ -48,7 +46,6 @@ const Images = ({ ImageUrls }) => {
 		<>
 			<div className={styles.imgContainer} ref={imgContainerRef}>
 				{ImageUrls.map((url, index) => {
-					const [loading, setLoading] = useState(true);
 					return (
 						<div
 							key={index}
@@ -58,7 +55,7 @@ const Images = ({ ImageUrls }) => {
 							onClick={showPopup}
 						>
 							<div className={styles.imageWrapper}>
-								<Image quality={100} src={loading ? defaultImage : url} width={270} height={270} objectFit="cover" onLoadingComplete={() => setLoading(false)} />
+								<Image src={url} width={270} height={270} objectFit="cover" />
 							</div>
 						</div>
 					);
