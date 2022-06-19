@@ -19,6 +19,7 @@
         cursor: pointer;
         position: relative;
         user-select: none;
+        -webkit-tap-highlight-color: transparent;
 
         .imageWrapper {
             position: absolute;
@@ -70,6 +71,7 @@
     pointer-events: none;
     transition: 0.3s all;
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
 
     &::after {
         content: '';
@@ -91,7 +93,7 @@
         position: relative;
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.4),
             0 0 0 3px rgba(255, 255, 255);
-            user-select: none;
+        user-select: none;
 
         img {
             border-radius: 20px;
