@@ -5,6 +5,8 @@
 }
 
 body {
+  min-height: 100vh;
+
   &::-webkit-scrollbar {
     height: 5px;
     width: 10px;
@@ -21,7 +23,41 @@ body {
   }
 }
 
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.user-input {
+  margin: auto;
+  width: max-content;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  input {
+    font-size: 17px;
+    padding: 5px 10px;
+    width: 300px;
+  }
+
+  .btn {
+    padding: 8px 20px;
+    margin-left: 20px;
+    background: black;
+    letter-spacing: 1.4px;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 18px;
+  }
 }
