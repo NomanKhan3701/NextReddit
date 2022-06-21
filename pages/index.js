@@ -28,7 +28,6 @@ export default function Home({ ImageUrls }) {
       const imageUrlsArray = await response.data.children.map((child) => {
         return child.data.thumbnail
       })
-      console.log(limit, imageUrlsArray.length)
       await setImageUrl(imageUrlsArray);
       setLoading(false)
 
